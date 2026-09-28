@@ -1,0 +1,9 @@
+#!/data/data/com.termux/files/usr/bin/bash
+
+OSINT_DIR="$HOME/.osint"
+
+if [ "$1" = "help" ]; then
+    python "$OSINT_DIR/osint_help.py"
+else
+    python "$OSINT_DIR/osint.py" "$@"
+fi
