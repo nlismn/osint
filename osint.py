@@ -1114,11 +1114,12 @@ def main():
 
         elif choice == "2":
             import subprocess
-            subprocess.run(
-                ["python", os.path.expanduser("~/osint/osint_help.py")]
+            help_path = os.path.join(
+                os.path.dirname(os.path.abspath(__file__)),
+                "osint_help.py"
             )
+            subprocess.run(["python", help_path])
             input("\nDevam etmek için ENTER...")
-
         elif choice == "0":
             clear()
             print(f"{CYAN}Program kapatıldı.{RESET}")
